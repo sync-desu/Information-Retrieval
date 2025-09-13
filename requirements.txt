@@ -1,0 +1,7 @@
+chainlit==2.7.2
+langchain==0.3.27
+langchain-chroma==0.2.5
+langchain-core==0.3.76
+langchain-ollama==0.3.7
+semantic-text-splitter==0.28.0
+unstructured[all-docs]==0.18.14

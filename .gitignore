@@ -1,0 +1,6 @@
+.venv
+.chainlit
+test.py
+__pycache__
+data
+vectorstore
