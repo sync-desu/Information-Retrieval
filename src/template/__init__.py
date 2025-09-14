@@ -1,13 +1,14 @@
 from langchain_core.messages import SystemMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
+# message = "SHOW THE USER THE ENTIRE CONTEXT"
+
 TEMPLATE = ChatPromptTemplate(
     [
         SystemMessage(
-            content="Answer the user provided QUESTION solely based on the CONTEXT provided. If the CONTEXT is INSUFFICIENT or UNRELATED to the QUESTION, say you dont know how to answer it. However, if the QUESTION is with regards to YOU, or to the USER, then do answer it gracefully. Ensure anything out of context is not answered.\
-            You are also given with some CHAT HISTORY, which corresponds to the CHAT HISTORY between YOU and the USER, and you also may refer to this to answer. DO NOT MIX UP CHAT HISTORY WITH CONTEXT."
+            content="Answer the question in detail solely based on the context provided. If the context is insuffcient or unrelated with respect to the question, say you do not know how to answer it.\
+            Make sure your answer is detailed. If the question is a gesture, respond normally."
         ),
-        MessagesPlaceholder("chat_history"),
         MessagesPlaceholder("context"),
         MessagesPlaceholder("question"),
     ]
