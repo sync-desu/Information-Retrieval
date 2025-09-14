@@ -1,5 +1,6 @@
 .venv
 .chainlit
+.files
 test.py
 __pycache__
 data
